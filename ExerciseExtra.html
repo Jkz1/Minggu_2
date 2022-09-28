@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    p{
+        color: white;
+    }
+</style>
+</head>
+<body>
+  <textarea name="" id="text" cols="80" rows="30"></textarea>
+  <p>Jumlah Kata : <span id="jmlhkata"></span></p>
+</body>
+<script>
+  let text = document.getElementById("text")
+
+  let jmlhkata = document.getElementById("jmlhkata")
+
+  text.addEventListener("input", function(){
+    let tmp = text.value
+    jmlhkata.innerText = tmp.length
+  })
+</script>
+</html>

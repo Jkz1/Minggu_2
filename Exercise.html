@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    p{
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <p id="lyric"></p>
+  <p>Jumlah kata : <span id="jmlh"></span></p>
+</body>
+<script>
+  let lirik_lagu = {
+    status: true,
+    data : {
+      artist: "Westlife",
+      songTitle: "I Have A Dream",
+      songLyrics: "I have a dream, a song to sing\nTo help me cope with anything\nIf you see the wonder (wonder) of a fairy tale\nYou can take the future even if you fail"
+    }
+  }
+
+  let songlyric01 = lirik_lagu.data["songLyrics"].replaceAll("\n"," ")
+
+  let jmlhkata = songlyric01.split(" ")
+
+  document.getElementById("lyric").innerText = lirik_lagu.data["songLyrics"]
+  document.getElementById("jmlh").innerHTML = jmlhkata.length
+
+  console.log(jmlhkata)
+</script>
+</html>

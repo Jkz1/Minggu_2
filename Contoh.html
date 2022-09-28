@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    p{
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <p id="data"></p>
+  <p>Jumlah Kalimat : <span id="jmlh"></span></p>
+</body>
+<script>
+  let content = {
+  "status" : true,
+  "title" : "Memory",
+  "data":"Memori adalah urutan byte yang berisi sepotong kecil informasi.Informasi ini mungkin menjadi perintah untuk mengatakan pada computar apa yangharus dilakukan. Sel mungkin berisi data yang diperlukan computar untukmelakukan suatu perintah. Setiap slot mungkin berisi salah satu, dan apa yangsekarang menjadi data mungkin saja kemudian menjadi perintah. Ukuran masing-masing sel, dan jumlah sel, berubah secara hebat dari computar ke computar,dan teknologi dalam pembuatan memori sudah berubah secara hebat - dari relayelektromekanik, ke tabung yang diisi dengan air raksa di mana pulsa akustikterbentuk, sampai matriks magnet permanen, ke setiap transistor, ke sirkuitterpadu dengan jutaan transistor di atas satu chip silikon.",
+  }
+
+  let data_content = content.data.replaceAll("computar", "komputer")
+  
+  let Arrdata = content.data.split('.').length-1
+  
+  document.getElementById("data").innerText = content.data
+  
+  document.getElementById("jmlh").innerText = Arrdata
+</script>
+</html>
